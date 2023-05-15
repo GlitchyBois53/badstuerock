@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+@font-face {
+    font-family: 'N27';
+    src: url(../fonts/n27.otf);
+}
+
+/* Utility classes / custom variables */
+
+:root {
+
+    /* COLORS */
+    --white: #FFFFF9;
+    --black: #161616;
+    --green: #43E597;
+    --yellow: #FCFF71;
+    --red: #FF7253;
+
+    /* GRADIENT */
+
+    --green-gradient: linear-gradient(-15deg, #4EDE99, #00FF85);
+
+    /* SPACING */
+    --xs-spacing: 23px;
+    --sm-spacing: 39px;
+    --md-spacing: 55px;
+    --lg-spacing: 75px;
+
+    /* MAX-WIDTH */
+    --max-width: 1600px;
+
+    /* FONT SIZES */
+    --xs3-font: 10px;
+    --xs2-font: 11px;
+    --xs-font: 16px;
+    --sm-font: 18px;
+    --md-font: 20px;
+    --lg-font: 24px;
+    --xl-font: 28px;
+    --xl2-font: 34px;
+    --xl3-font: 38px;
+    --xl4-font: 48px;
+    --xl5-font: 56px;
+    --xl6-font: 60px;
+    --xl7-font: 40px; 
+
+    /* FONT FAMILY */
+    --primary-ff: 'Inter', system-ui;
+    --secondary-ff: 'N27', system-ui;
+    --tertiary-ff: 'Roboto', system-ui;
+
+    /* FONT WEIGTHS */
+    --regular-font: 400;
+    --medium-font: 500;
+    --semibold-font: 600;
+    --bold-font: 700;
+}
+
+
+/* Omni selector / reset */
+
+/*
+  1. Use a more-intuitive box-sizing model. CREDIT: https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  font-family: var(--primary-ff);
+  list-style: none;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--white);
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6, li {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* 
+  10. Fix inline indent on ul
+*/
+
+ul {
+    padding-inline-start: 0px;
+}
+
+/* Wrapper */
+
+.outer-wrapper {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Custom variable doesn't work in media query */
+
+@media screen and (min-width: 1600px) {
+    .outer-wrapper {
+        border-inline: 3px solid var(--black);
+    }
+}
+
+.inner-wrapper {
+    width: 100%;
+}
+
+/*-- HEADER --*/
+
+/* General header styling */
+
+header {
+  display: flex;
+  width: 100%;
+  padding: var(--xs-spacing);
+  justify-content: space-between;
+  border-bottom: 3px solid var(--black);
+}
+
+/* Styling the first div in the header container */
+
+header div:nth-child(1) {
+  font-size: var(--xl7-font);
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  height: 82px;
+}
+
+/* Styling the span in the H1 of the first div making the 'rock' in 'badstuerock' stroke only */
+
+header h1 {
+    font-family: var(--tertiary-ff);
+}
+
+header span {
+  -webkit-text-fill-color: var(--white);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--black);
+  color: var(--black);
+  font-family: var(--tertiary-ff);
+}
+
+/* Styling the composition of second div of the header container */
+
+header div:nth-child(2) {
+  align-self: flex-end;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+/* Defining the font size and family of the paragraph element in the second div of the header container */
+
+header div:nth-child(2) p {
+  font-family: var(--secondary-ff);
+  font-size: var(--md-font);
+}
+
+/* Turning the arrow - after '1973' - 180 degrees */
+
+header div:nth-child(2) img {
+  transform: rotate(180deg);
+  width: 15px;
+  object-fit: contain;
+}
+
+/* Desktop Menu Styling */
+
+.menu-desktop {
+    width: 45px;
+}
+
+/* Desktop Menu + Nav Wrapper Styling */
+
+.menu-desktop .nav-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 100vh;
+    background-color: var(--white);
+}
+
+/* Open and Close animation for Menu */
+
+.nav-active {
+    animation: nav-open 0.5s ease forwards;
+}
+
+.nav-not-active {
+    animation: nav-close 0.5s ease forwards;
+}
+
+@keyframes nav-open {
+    0% {
+        width: 45px;
+    }
+    100% {
+        width: 428px;
+    }
+}
+
+@keyframes nav-close {
+    100% {
+        width: 45px;
+    }
+    0% {
+        width: 428px;
+    }
+}
+
+/* Desktop Menu Nav Styling */
+
+.menu-desktop nav {
+    height: 100vh;
+    width: inherit;
+    border-left: 3px var(--black) solid;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Desktop Menu Nav Div 1st child Styling - Div containing H2 + img */
+
+.menu-desktop nav div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 36.75px;
+    transform: translateX(-14px);
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Desktop Menu Nav Div H2 Styling */
+
+.menu-desktop nav div h2 {
+    font-family: var(--secondary-ff);
+    font-size: var(--lg-font);
+    font-weight: var(--regular-font);
+    transform: rotate(90deg);
+}
+
+/* Desktop Menu Nav Div Img Styling */
+
+.menu-desktop nav div img {
+    transform: rotate(0deg);
+}
+
+/* Menu Animation - Turning Arrow on Open and Close */
+
+@keyframes menu-arrow-active {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes menu-arrow-not-active {
+    0%{
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.menu-arrow-active {
+    animation: menu-arrow-active ease 0.5s forwards;
+}
+
+.menu-arrow-not-active {
+    animation: menu-arrow-not-active ease 0.5s forwards;
+}
+
+.nav-content {
+    opacity: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+    width: 100%;
+    padding-top: 82px;
+    padding-bottom: 52px;
+    padding-right: 40px;
+    position: relative;
+    pointer-events: none;
+}
+
+.nav-content-active {
+    animation: content-active 1s forwards ease;
+    animation-delay: 0.3s;
+    pointer-events: auto;
+}
+
+.nav-content-not-active {
+    animation: content-not-active 0.2s forwards ease;
+    pointer-events: none;
+}
+
+
+@keyframes content-active {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes content-not-active {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.nav-links {
+    grid-column: 1 / -1;
+    text-align: right;
+    font-family: var(--secondary-ff);
+    font-size: var(--lg-font);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.nav-links li {
+    font-family: var(--secondary-ff);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    width: max-content;
+    height: 37px;
+}
+
+.nav-links li::after {
+    content: '';
+    height: 4px;
+    width: calc(100% + 140px);
+    background-color: var(--green);
+    position: absolute;
+    bottom: -10px;
+    left: -20px;
+    transform: translateX(100%);
+}
+
+.nav-links li span {
+    width: 37px;
+    height: 37px;
+    content: url(../img/arrow-diagonal.svg);
+    padding: 11px 0px 11px 11px;
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+.nav-links li:hover span {
+    opacity: 1;
+    transform: rotate(0deg) translateX(6px);
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover::after {
+    transform: translateX(0%);
+    transition: all 0.3s ease;
+}
+
+.link-active {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    height: 58px;
+    margin-top: -11px;
+    background-color: var(--green);
+    width: calc(100% + 140px);
+    z-index: -1;
+}
+
+.opening-hours {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    font-size: 18px;
+    font-weight: var(--medium-font);;
+    gap: 18px;
+}
+
+.opening-hours span {
+    font-family: var(--secondary-ff);
+    font-size: 16px;
+}
+
+.contact {
+    position: absolute;
+    bottom: 52px;
+    right: 40px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.contact ul {
+    transform: rotate(90deg) translate(-17px, -102px);
+    font-size: var(--md-font);
+}
+
+.contact ul li:nth-child(1) {
+    padding-bottom: 6px;
+}
+
+.some {
+    display: flex;
+    gap: 13px;
+    flex-direction: column;
+    transform: translateX(155px);
+}
+
+.some img {
+    width: 33px;
+    object-fit: contain;
+}
+
+/* MOBILE MENU */
+
+.menu-mobile {
+    position: fixed;
+    inset: 30px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: none;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 850px) {
+
+    header div:nth-child(1) img {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 770px) {
+
+    header div:nth-child(2) {
+        display: none;
+      }
+
+}
+
+@media screen and (max-width: 710px) {
+    
+    .menu-mobile {
+        display: flex;
+    }
+ 
+    @keyframes nav-open-mobile {
+        0% {
+            width: 0px;
+            background-color: var(--white);
+        }
+        100% {
+            width: 100%;
+            background-color: var(--white);
+        }
+    }
+    
+    @keyframes nav-close-mobile {
+        100% {
+            width: 0px;
+            background-color: var(--white);
+        }
+        0% {
+            width: 100%;
+            background-color: var(--white);
+        }
+    }
+
+    .nav-active {
+        animation: nav-open-mobile 0.5s ease forwards;
+    }
+    
+    .nav-not-active {
+        animation: nav-close-mobile 0.5s ease forwards;
+    }
+
+    .desktop-btn {
+        display: none!important;
+    }
+
+    .nav-content {
+        padding-inline: 40px;
+    }
+
+    .menu-desktop {
+        width: 0px;
+    }
+
+    .menu-desktop nav {
+        border-left: none;
+    }
+
+    .menu-desktop .nav-wrapper {
+        background-color: transparent;
+    }
+
+}
+
+@media screen and (max-width: 660px) {
+    
+    header div:nth-child(1) h1 {
+        width: 100%;
+    }
+}
+
+.menu-btn {
+    border: 3px solid var(--black);
+    display: flex;
+    gap: 8px;
+    padding: 13px;
+    background-color: var(--white);
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.menu-btn h2 {
+    font-family: var(--secondary-ff);
+    font-weight: var(--regular-font);
+}
+
+.spacer {
+    height: 200vh;
+}
+
+
