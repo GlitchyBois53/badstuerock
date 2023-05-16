@@ -235,7 +235,6 @@ header div:nth-child(2) img {
     right: 0;
     width: 45px;
     height: 100vh;
-    background-color: var(--white);
 }
 
 /* Open and Close animation for Menu */
@@ -276,6 +275,7 @@ header div:nth-child(2) img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--white);
 }
 
 /* Desktop Menu Nav Div 1st child Styling - Div containing H2 + img */
@@ -647,6 +647,10 @@ header div:nth-child(2) img {
         }
     }
 
+    .menu-desktop .nav-wrapper {
+        width: 0px;
+    }
+
     .nav-active {
         animation: nav-open-mobile 0.5s ease forwards;
     }
@@ -801,7 +805,7 @@ header div:nth-child(2) img {
     }
 
     .hero-text {
-        height: calc(100vh - 130px - 353px);
+        min-height: calc(100vh - 130px - 353px);
     }
 }
 
@@ -903,7 +907,7 @@ header div:nth-child(2) img {
 
 @media screen and (max-width: 415px) {
     .hero-text {
-        height: calc(100vh - 114.8px - 353px);
+        min-height: calc(100vh - 114.8px - 353px);
     }
     .hero-text article h2 {
         font-size: 9.5vw;
