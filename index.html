@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/logo-alternate.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
+    <script src="js/releasesGenerator.js" defer type="module"></script>
     <title>Badstuerock</title>
 </head>
 
@@ -29,8 +30,8 @@
                 <!-- Header div 1 Start -->
 
                 <div>
-                    <a href="index.html"><img src="img/logo-alternate.png" alt="badstue-logo"></a>
-                    <h1>BADSTUE<span>ROCK</span></h1>
+                    <a href="index.html"><img src="img/logo.svg" alt="badstue-logo"></a>
+                    <h1 onclick="window.location.href = 'index.html'">BADSTUE<span>ROCK</span></h1>
                 </div>
 
                 <!-- Header div 1 End -->
@@ -48,10 +49,8 @@
 
             <!-- Header End -->
 
-            <!-- Spacer Start -->
-
             <div class="hero">
-                <img src="img/badstue-hero.png" alt="badstue-hero">
+                <img src="img/badstue-hero.webp" alt="badstue-hero">
                 <div class="hero-text">
                     <article>
                         <h2>BADSTUEGADE 22</h2>
@@ -64,6 +63,67 @@
                     </div>
                 </div>
             </div>
+
+            <div class="m-scroll box-65 letter-height">
+                <div class="m-scroll__title">
+                  <div class="scroll-backward letter-gap">
+                    <h2>
+                       NYE RELEASES <span>NYE RELEASES</span> NYE RELEASES <span>NYE RELEASES</span> NYE RELEASES <span>NYE RELEASES</span>
+                    </h2>
+                    <h2>
+                        NYE RELEASES <span>NYE RELEASES</span> NYE RELEASES <span>NYE RELEASES</span> NYE RELEASES <span>NYE RELEASES</span>
+                    </h2>
+                  </div>
+                </div>
+            </div>
+
+            <div class="releases-wrapper">
+                <div class="releases-inner-wrapper" >
+                    <div class="releases" id="releases">
+                        
+                    </div>
+                    <!-- Show all Icon Start -->
+    
+                    <div class="show-all">
+                        <div class="show-all-btn">
+                            <img src="img/arrow-diagonal.svg" alt="arrow">
+                        </div>
+                        <h5>vis alle</h5>
+                    </div>
+    
+                    <!-- Show all Icon End -->
+                </div>
+    
+                <div class="m-scroll box-off arrow-height">
+                    <div class="m-scroll__title">
+                      <div class="scroll-forward arrow-gap">
+                        <div class="flex">
+                            <img class="arrow-forward" src="img/arrow-forward.png" alt="arrow-forward">
+                            <img class="arrow-forward" src="img/arrow-forward.png" alt="arrow-forward">
+                        </div>
+                        <div class="flex">
+                            <img class="arrow-forward" src="img/arrow-forward.png" alt="arrow-forward">
+                            <img class="arrow-forward" src="img/arrow-forward.png" alt="arrow-forward">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m-scroll box-55 letter-height">
+                <div class="m-scroll__title">
+                  <div class="scroll-backward letter-gap">
+                    <h2>
+                       BADSTUE <span>ANBEFALER</span> BADSTUE <span>ANBEFALER</span> BADSTUE <span>ANBEFALER</span> BADSTUE <span>ANBEFALER</span> BADSTUE <span>ANBEFALER</span> BADSTUE <span>ANBEFALER</span>
+                    </h2>
+                    <h2>
+                        BADSTUE <span>ANBEFALER</span> BADSTUE <span>ANBEFALER</span> BADSTUE <span>ANBEFALER</span> BADSTUE <span>ANBEFALER</span> BADSTUE <span>ANBEFALER</span> BADSTUE <span>ANBEFALER</span>
+                    </h2>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Spacer Start -->
 
             <div class="spacer">
                 
@@ -79,42 +139,91 @@
 
         <aside class="menu-desktop">
 
-            <!-- Nav-menu Start-->
+            <!-- Nav-menu / Nav-wrapper Start-->
 
             <div id="nav-menu" class="nav-wrapper nav-neutral">
+
+                <!-- Nav Element Start -->
+
                 <nav>
+
+                    <!-- Menu bar right side of screen Start -->
+
                     <div class="desktop-btn"  onclick="navToggle()">
                         <h2>MENU</h2>
-                        <img id=menu-arrow src="img/arrow-plain.svg" alt="">
+                        <img id=menu-arrow src="img/arrow-plain.svg" alt="menu-arrow">
                     </div>
+
+                    <!-- Menu bar right side of screen End -->
+
+                    <!-- Nav menu content Start -->
+
                     <div class="nav-content" id="nav-content">
+
+                        <!-- Close Button for the Menu when width is Below 710px Start -->
+
                         <div class="close-btn" onclick="mobileNavToggle()">
                             <img src="img/close.png" alt="close-btn">
                         </div>
+
+                        <!-- Close Button for the Menu when width is Below 710px End -->
+
+                        <!-- Container for Menu / Nav Links Start -->
+
                         <ul class="nav-links">
                             <li><strong></strong>INVENTAR<span></span></li>
                             <li><strong></strong>UPCOMING<span></span></li>
                             <li><strong></strong>ARTIKLER<span></span></li>
                             <li><strong></strong>OM OS<span></span></li>
                         </ul>
+
+                        <!-- Container for Menu / Nav Links End -->
+
+                        <!-- Container for Opening Hours in Menu Start -->
+
                         <ul class="opening-hours">
                             <li>MAN - TOR<br><span>11:00-17:30</span></li>
                             <li>FRE<br><span>11:00-18:00</span></li>
                             <li>LØR<br><span>10:30-15:30</span></li>
                             <li>SØN<br><span>LUKKET</span></li>
                         </ul>
+
+                        <!-- Container for Opening Hours in Menu End -->
+
+                        <!-- Contact Container Start -->
+
                         <div class="contact">
+
+                            <!-- Phone Number And Email Container Start -->
+
                             <ul>
                                 <li>info@badstuerock.dk</li>
                                 <li>+45 31 45 36 63</li>
                             </ul>
+
+                            <!-- Phone Number And Email Container End -->
+
+                            <!-- SoMe Icons Container Start -->
+
                             <div class="some">
-                                <img src="img/instagram.png" alt="">
-                                <img src="img/facebook.png" alt="">
+                                <img src="img/instagram.png" alt="instagram-icon">
+                                <img src="img/facebook.png" alt="facebook-icon">
                             </div>
+
+                            <!-- SoMe Icons Container End -->
+
                         </div>
+
+                        <!-- Contact Container End -->
+
                     </div>
+
+                    <!-- Nav menu content End -->
+                    
                 </nav>
+
+                <!-- Nev Element End -->
+
             </div>
             
             
