@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo-alternate.png" type="image/x-icon">
+    <title>Badstuerock - Inventar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/inventory.js" defer></script>
+    <script src="js/inventoryGenerator.js" defer type="module"></script>
+    <script src="js/searchFunctionality.js" defer type="module"></script>
+</head>
+<body>
+    <div class="outer-wrapper">
+
+        <!-- Inner Wrapper Start -->
+
+        <div class="inner-wrapper">
+
+            <!-- Header Start -->
+
+            <header class="submenu-header">
+
+                <!-- Header div 1 Start -->
+
+                <div>
+                    <a class="submenu-logo" href="index.html"><img src="img/logo.svg" alt="badstue-logo"></a>
+                    <h1 onclick="window.location.href = 'index.html'">BADSTUE<span>ROCK</span></h1>
+                    <h2 class="submenu-title">INVENTAR</h2>
+                </div>
+
+                <!-- Header div 1 End -->
+
+                <!-- Header div 2 Start -->
+
+                <div class="submenu-year">
+                    <p>1973</p>
+                    <img src="img/arrow-plain.svg" alt="arrow">
+                </div>
+
+                <!-- Header div 2 End -->
+
+            </header>
+
+            <!-- Header End -->
+
+            <div class="inventory-menu">
+                <div class="filter-menu filter-neutral" id="filter-menu">
+                    <div class="filter-content" id="filter-content">
+                        <!-- FILTER CONTENT HERE -->
+                        <h2>MEDIE</h2>
+                        <div class="filter-media" id="medias"></div>
+                        <h2>GENRE</h2>
+                        <div class="filter-genre" id="genres"></div>
+                    </div>
+                    <div class="filter-btn-wrapper">
+                        <div class="filter-btn" id="filter-btn" onclick="filterToggle()">
+                            <h2>FILTER</h2>
+                            <img src="img/arrow-plain.svg" id="filter-arrow" alt="arrow">
+                        </div>
+                    </div>
+                </div>
+                <div class="inventory-content">
+                    <div class="search-wrapper">
+                        <label for="search"></label>
+                        <input type="search" name="search" class="search-bar" id="search-bar" placeholder="SØG..">
+                        <div class="search-btn">
+                            <img src="img/search.svg" alt="search-icon">
+                        </div>
+                    </div>
+
+                    <template id="inventory-template">
+                        <div id="inventory-card" class="inventory-card">
+                            <div id="inventory-image" class="inventory-image"></div>
+                            <div id="inventory-genre-year" class="inventory-genre-year">
+                                <p id="inventory-genre" class="inventory-genre"></p>
+                                <p id="inventory-year" class="inventory-year"></p>
+                            </div>
+                            <h2 id="inventory-title" class="inventory-title"></h2>
+                            <h3 id="inventory-artist" class="inventory-artist"></h3>
+                        </div>
+                    </template>
+
+                    <div class="inventory-container" id="inventory-container">
+                        <!-- WE SPAWN SHIT HERE -->
+                    </div>
+
+                    <!-- PAGE CONTENT HERE -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Inner Wrapper End -->
+
+        <!-- Aside / Menu Start -->
+
+        <aside class="menu-desktop">
+
+            <!-- Nav-menu / Nav-wrapper Start-->
+
+            <div id="nav-menu" class="nav-wrapper nav-neutral">
+
+                <!-- Nav Element Start -->
+
+                <nav>
+
+                    <!-- Menu bar right side of screen Start -->
+
+                    <div class="desktop-btn"  onclick="navToggle()">
+                        <h2>MENU</h2>
+                        <img id=menu-arrow src="img/arrow-plain.svg" alt="menu-arrow">
+                    </div>
+
+                    <!-- Menu bar right side of screen End -->
+
+                    <!-- Nav menu content Start -->
+
+                    <div class="nav-content" id="nav-content">
+
+                        <!-- Close Button for the Menu when width is Below 710px Start -->
+
+                        <div class="close-btn" onclick="mobileNavToggle()">
+                            <img src="img/close.png" alt="close-btn">
+                        </div>
+
+                        <!-- Close Button for the Menu when width is Below 710px End -->
+
+                        <!-- Container for Menu / Nav Links Start -->
+
+                        <ul class="nav-links">
+                            <li onclick="window.location.href = 'inventory.html'"><strong class="link-active"></strong>INVENTAR<span></span></li>
+                            <li><strong></strong>UPCOMING<span></span></li>
+                            <li><strong></strong>ARTIKLER<span></span></li>
+                            <li><strong></strong>OM OS<span></span></li>
+                        </ul>
+
+                        <!-- Container for Menu / Nav Links End -->
+
+                        <!-- Container for Opening Hours in Menu Start -->
+
+                        <ul class="opening-hours">
+                            <li>MAN - TOR<br><span>11:00-17:30</span></li>
+                            <li>FRE<br><span>11:00-18:00</span></li>
+                            <li>LØR<br><span>10:30-15:30</span></li>
+                            <li>SØN<br><span>LUKKET</span></li>
+                        </ul>
+
+                        <!-- Container for Opening Hours in Menu End -->
+
+                        <!-- Contact Container Start -->
+
+                        <div class="contact">
+
+                            <!-- Phone Number And Email Container Start -->
+
+                            <ul>
+                                <li>info@badstuerock.dk</li>
+                                <li>+45 31 45 36 63</li>
+                            </ul>
+
+                            <!-- Phone Number And Email Container End -->
+
+                            <!-- SoMe Icons Container Start -->
+
+                            <div class="some">
+                                <img src="img/instagram.png" alt="instagram-icon">
+                                <img src="img/facebook.png" alt="facebook-icon">
+                            </div>
+
+                            <!-- SoMe Icons Container End -->
+
+                        </div>
+
+                        <!-- Contact Container End -->
+
+                    </div>
+
+                    <!-- Nav menu content End -->
+                    
+                </nav>
+
+                <!-- Nev Element End -->
+
+            </div>
+            
+            
+            <!-- Nav-menu End -->
+
+        </aside>
+
+        <!-- Menu - Mobile Start -->
+
+        <div class="menu-mobile">
+            <div class="menu-btn mobile-not-active" id="mobile-menu" onclick="mobileNavToggle()">
+                <img src="img/arrow-plain.svg" alt="arrow">
+                <h2>MENU</h2>
+            </div>
+        </div>
+
+        <!-- Menu - Mobile End -->
+
+        <!-- Aside / Menu End -->
+
+    </div>
+
+    <!-- Outer Wrapper End -->
+</body>
+</html>
