@@ -12,13 +12,14 @@
     /* COLORS */
     --white: #FFFFF9;
     --black: #000006;
+    --blue: #3CC8EC;
     --green: #43E597;
     --yellow: #FCFF71;
     --red: #FF7253;
 
     /* GRADIENT */
 
-    --green-gradient: linear-gradient(-15deg, #4EDE99, #00FF85);
+    --blue-gradient: linear-gradient(-15deg, #01c6e0, #01a1e0);
 
     /* SPACING */
     --xs-spacing: 23px;
@@ -58,7 +59,7 @@
 
 /* SCROLLBEHAVIOR */
 
-html {
+* {
   scroll-behavior: smooth;
 }
 
@@ -74,12 +75,12 @@ html {
 }
   
 ::-webkit-scrollbar-thumb {
-  background: var(--green);
+  background: var(--blue);
 }
   
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--green); 
+  background: var(--blue); 
 }
 
 /*--------- GREEN BOX UTILITY ------------*/
@@ -164,6 +165,7 @@ html {
   margin: 0;
   font-family: var(--primary-ff);
   list-style: none;
+  color: var(--black);
 }
 
 /*
@@ -537,7 +539,7 @@ header div:nth-child(2) img {
     content: '';
     height: 4px;
     width: calc(100% + 140px);
-    background-color: var(--green);
+    background-color: var(--blue);
     position: absolute;
     bottom: -10px;
     left: -20px;
@@ -574,7 +576,7 @@ header div:nth-child(2) img {
     left: -20px;
     height: 58px;
     margin-top: -11px;
-    background-color: var(--green);
+    background-color: var(--blue);
     width: calc(100% + 140px);
     z-index: -1;
 }
@@ -643,7 +645,7 @@ header div:nth-child(2) img {
     content: '';
     height: 3px;
     width: 100%;
-    background-color: var(--green);
+    background-color: var(--blue);
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -902,7 +904,7 @@ header div:nth-child(2) img {
     content: '';
     width: 100%;
     height: 72px;
-    background-color: var(--green);
+    background-color: var(--blue);
     position: absolute;
     top: 0;
     left: 0;
@@ -954,7 +956,7 @@ header div:nth-child(2) img {
     width: 217px;
     height: 217px;
     object-fit: contain;
-    background: var(--green-gradient);
+    background: var(--blue-gradient);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1101,7 +1103,7 @@ header div:nth-child(2) img {
     top: 0;
     bottom: 0;
     z-index: 0;
-    background-color: #BC1A62;
+    background-color: #FE4C1F;
     position: absolute;
   }
 
@@ -1154,6 +1156,10 @@ header div:nth-child(2) img {
     animation: scrollTextBackward infinite linear;
   }
 
+  .scroll-speed-extraslow {
+    animation-duration: 99s;
+  }
+
   .scroll-speed-slow {
     animation-duration: 66s;
   }
@@ -1169,6 +1175,7 @@ header div:nth-child(2) img {
     transition: all 2s ease;
     font-family: var(--tertiary-ff);
     letter-spacing: 1.3px;
+    text-transform: uppercase;
   }
 
   .m-scroll__title h2 span {
@@ -1279,7 +1286,7 @@ header div:nth-child(2) img {
   }
 
   .genre {
-    background-color: var(--green);
+    background-color: var(--blue);
     padding-inline: 9px;
     padding-block: 2px;
   }
@@ -1330,7 +1337,7 @@ header div:nth-child(2) img {
     height: 57px;
     width: 57px;
     border-radius: 50%;
-    background-color: var(--green);
+    background-color: var(--blue);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1408,7 +1415,7 @@ header div:nth-child(2) img {
     font-size: var(--md-font);
     font-weight: var(--regular-font);
     color: var(--black);
-    background-color: var(--green);
+    background-color: var(--blue);
     padding-inline: 11.25px;
     padding-block: 3px;
     width: max-content;
@@ -1504,7 +1511,7 @@ header div:nth-child(2) img {
   }
 
   .play-btn > div:nth-child(1) {
-    background-color: var(--green);
+    background-color: var(--blue);
     width: 112px;
     height: 112px;
     border-radius: 50%;
@@ -1531,7 +1538,7 @@ header div:nth-child(2) img {
   #progress-bar {
     height: 10px;
     width: 100%;
-    background-color: var(--green);
+    background-color: var(--blue);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1582,7 +1589,7 @@ header div:nth-child(2) img {
     font-weight: 400;
     margin-block: 9px;
     font-family: var(--secondary-ff);
-    background-color: var(--green);
+    background-color: var(--blue);
     padding-inline: 9px;
     padding-block: 2px;
     width: max-content;
@@ -1774,7 +1781,7 @@ header div:nth-child(2) img {
     content: '';
     width: 71.8%;
     height: 4px;
-    background-color: var(--green);
+    background-color: var(--blue);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -2055,10 +2062,10 @@ header div:nth-child(2) img {
   } 
 
   .filter-active .checkbox-color {
-    background-color: var(--green);
+    background-color: var(--blue);
   }
 
-  .filter-hide {
+  .hide {
     display: none!important;
   }
 
@@ -2126,7 +2133,7 @@ header div:nth-child(2) img {
     width: 44px;
     height: 44px;
     display: block;
-    background-color: var(--green);
+    background-color: var(--blue);
     border: 3px var(--black) solid;
     display: flex;
     align-items: center;
@@ -2135,6 +2142,108 @@ header div:nth-child(2) img {
 
   .search-btn img {
     transform: translate(5%, -5%);
+  }
+
+  .inventory-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 39px;
+    justify-content: center;
+  }
+
+  .inventory-card {
+    max-width: 190px;
+    width: 100%;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .inventory-card::after {
+    content: '';
+    background-image: url(../img/corner.svg);
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .inventory-image {
+    width: 190px;
+    height: 190px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .inventory-genre-year {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6.2px;
+  }
+
+  .inventory-genre-year p {
+    font-size: 12px;
+    font-family: var(--secondary-ff);
+  }
+
+  .inventory-genre-year p:nth-child(1) {
+    background-color: var(--blue);
+    padding-inline: 6px;
+    padding-block: 2px;
+  }
+
+  .inventory-title {
+    font-weight: var(--bold-font);
+    font-size: 16px;
+    padding-top: 4px;
+    height: 23.2px;
+    overflow: hidden;
+  }
+
+  .inventory-artist {
+    font-family: var(--secondary-ff);
+    font-size: 14px;
+    font-weight: var(--regular-font);
+    padding-top: 4px;
+    height: 20.8px;
+    overflow: hidden;
+    padding-right: 5px;
+  }
+
+  .product-wrapper {
+    width: 100%;
+  }
+
+  .product-picture {
+    width: 600px;
+    aspect-ratio: 600 / 422;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .media-active {
+    color: var(--blue);
+  }
+
+  .product-availability-color {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--black);
+  }
+
+  .product-green {
+    background-color: var(--green);
+  }
+
+  .product-yellow {
+    background-color: var(--yellow);
+  }
+
+  .product-red {
+    background-color: var(--red);
   }
 
   .spacer {

@@ -129,7 +129,7 @@ const filterInventory = () => {
             }
         }
 
-        inventory.element.classList.toggle('filter-hide', !isVisible)
+        inventory.element.classList.toggle('hide', !isVisible)
     })
 }
 
@@ -230,20 +230,15 @@ funkFilter.addEventListener('click', () => {
 const displayInventories = arr => {
     inventoriesResults = arr.map(inventory => {
 
-
         const card = inventoryTemplate.content.cloneNode(true).children[0]
         // her laver vi en variabel der repraesenterer de elementer vi skal bruge
         
-        console.log(inventory.year)
-        
-        const image = card.querySelector("#inventory-image")
-        const genre = card.querySelector("#inventory-genre")
-        const year = card.querySelector("#inventory-year")
-        const title = card.querySelector("#inventory-title")
-        const artist = card.querySelector("#inventory-artist")
-
-        console.log(inventory.genre)
-        
+        const image = card.querySelector(".inventory-image")
+        const genre = card.querySelector(".inventory-genre")
+        const year = card.querySelector(".inventory-year")
+        const title = card.querySelector(".inventory-title")
+        const artist = card.querySelector(".inventory-artist")
+        const id = card.querySelector(".inventory-card-id")
 
         // her indsætter vi vores textcontent i de forskellige sektioner i vores card
 
@@ -251,7 +246,8 @@ const displayInventories = arr => {
         genre.innerHTML = inventory.genre
         year.innerHTML = inventory.year
         title.innerHTML = inventory.albumTitle
-        artist.innerHTML = inventory.artist    
+        artist.innerHTML = inventory.artist  
+        id.id = inventory.id
     
         // her "append'er" vi det card vi her har lavet til vores userCardContainer
 
@@ -259,10 +255,9 @@ const displayInventories = arr => {
 
         // her returnerer vi et object
 
-        return { image: inventory.image , albumTitle: inventory.albumTitle, artist: inventory.artist, year: inventory.year, genre: inventory.genre, keywords: inventory.keywords, element: card }
+        return { image: inventory.image , albumTitle: inventory.albumTitle, artist: inventory.artist, year: inventory.year, genre: inventory.genre, keywords: inventory.keywords, vinylStock: inventory.vinylStock, cdStock: inventory.cdStock, cassetteStock: inventory.cassetteStock, id: inventory.id, element: card }
     })
 }
-
 
 // The function that displays the search results is initiated with the 'inventories' which is imported further up in the file
 

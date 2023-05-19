@@ -39,7 +39,7 @@ var genreContainer = document.getElementById("genres")
 function genreGenerator() {
 	for (let genre of genres) {
 			genreContainer.innerHTML += 
-			`<div class="filter-checkbox" ${genre.data} onclick="">
+			`<div class="filter-checkbox" ${genre.data}>
                 <div class="checkbox-color"></div>
                 <div>
                     ${genre.title}

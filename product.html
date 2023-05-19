@@ -8,10 +8,7 @@
     <title>Badstuerock - Inventar</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
-    <script src="js/inventory.js" defer></script>
-    <script src="js/inventoryGenerator.js" defer type="module"></script>
-    <script src="js/searchFunctionality.js" defer type="module"></script>
-    <script src="js/productGenerator.js" defer type="module"></script>
+    <script src="js/product.js" defer type="module"></script>
 </head>
 <body>
     <div class="outer-wrapper">
@@ -47,52 +44,15 @@
 
             <!-- Header End -->
 
-            <div class="inventory-menu">
-                <div class="filter-menu filter-neutral" id="filter-menu">
-                    <div class="filter-content" id="filter-content">
-                        <!-- FILTER CONTENT HERE -->
-                        <h2>MEDIE</h2>
-                        <div class="filter-media" id="medias"></div>
-                        <h2>GENRE</h2>
-                        <div class="filter-genre" id="genres"></div>
-                    </div>
-                    <div class="filter-btn-wrapper">
-                        <div class="filter-btn" id="filter-btn" onclick="filterToggle()">
-                            <h2>FILTER</h2>
-                            <img src="img/arrow-plain.svg" id="filter-arrow" alt="arrow">
-                        </div>
-                    </div>
-                </div>
-                <div class="inventory-content">
-                    <div class="search-wrapper">
-                        <label for="search"></label>
-                        <input type="search" name="search" class="search-bar" id="search-bar" placeholder="SØG..">
-                        <div class="search-btn">
-                            <img src="img/search.svg" alt="search-icon">
-                        </div>
-                    </div>
-
-                    <template id="inventory-template">
-                        <div class="inventory-card">
-                            <div class="inventory-card-id" onclick="window.location.href = 'product.html'">
-                                <div class="inventory-image"></div>
-                                <div class="inventory-genre-year">
-                                    <p class="inventory-genre"></p>
-                                    <p class="inventory-year"></p>
-                                </div>
-                                <h2 class="inventory-title"></h2>
-                                <h3 class="inventory-artist"></h3>
-                            </div>
-                        </div>
-                    </template>
-
-                    <div class="inventory-container" id="inventory-container">
-                        <!-- WE SPAWN SHIT HERE -->
-                    </div>
-
-                    <!-- PAGE CONTENT HERE -->
+            <!-- Wrapper for the product content start -->
+            <div class="product-wrapper">
+                <!-- Product STUFF HERE -->
+                <div class="product" id="product">
+                    <div class="error">ERROR 404</div>
                 </div>
             </div>
+
+            <!-- Wrapper for the product content end -->
 
         </div>
 
