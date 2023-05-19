@@ -13,15 +13,6 @@ var product = JSON.parse(jsonString)
 var productContainer = document.getElementById("product")
 
 function productGenerator() {
-
-//     console.log(isVinylMediaActive)
-//     console.log(isCdMediaActive)
-//     console.log(isCassetteMediaActive)
- 
-//     const stock = () => {
-        
-//     }
-
     productContainer.innerHTML = 
     `<div class="m-scroll box-65 letter-height">
         <div class="m-scroll__title">
@@ -168,8 +159,4 @@ mediaBtns.forEach((userItem) => {
         }
     })
 })
-
-var isVinylMediaActive = vinylMedia.classList.contains("media-active")
-var isCdMediaActive = cdMedia.classList.contains("media-active")
-var isCassetteMediaActive = cassetteMedia.classList.contains("media-active")
 
