@@ -36,7 +36,7 @@ export const releases = [
         artist: "fred again..",
         year: "2023",
         genre: "elektronisk"
-    }
+    },
 ] 
 
 
@@ -490,7 +490,7 @@ export const inventories = [
         price: "",
         description: "",
         path: "",
-        scrollSpeed: "scroll-speed-medium"
+        scrollSpeed: "scroll-speed-slow"
     },
     {
         image: "../img/album-34.png",
@@ -519,7 +519,7 @@ export const inventories = [
         albumTitle: "secret life",
         artist: "fred again..",
         year: "2023",
-        genre: "elektronic",
+        genre: "elektronisk",
         vinylStock: [2, true],
         cdStock: [3, true],
         cassetteStock: [0, true],
@@ -528,6 +528,6 @@ export const inventories = [
         price: "169",
         description: '"Secret Life" er et følelsesladet og komplekst album af den britiske producer Fred Again... Med rørende tekster og samarbejder med Brian Eno og FKA twigs, er det et must-listen for fans af elektronisk og alternativ musik.',
         path: "secret-life",
-        scrollSpeed: "scroll-speed-medium"
+        scrollSpeed: "scroll-speed-slow"
     },
 ]

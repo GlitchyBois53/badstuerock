@@ -3,7 +3,6 @@
 
 var jsonString = sessionStorage.getItem("product-id")
 
-
 // Assigning the previously stringified object - now in JSON-format - to a variable
 
 var product = JSON.parse(jsonString)
@@ -18,10 +17,10 @@ function productGenerator() {
         <div class="m-scroll__title">
           <div class="scroll-backward ${product.scrollSpeed} letter-gap">
             <h2>
-               ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span>
+               ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span>
             </h2>
             <h2>
-                ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span>
+                ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> ${product.albumTitle} <span>${product.albumTitle}</span> 
             </h2>
           </div>
         </div>
@@ -29,11 +28,11 @@ function productGenerator() {
 
 
     <div class="product-flex">
-        <div>
+        <div class="product-picture-wrapper">
             <img class="product-picture" src="img/${product.path}/vinyl.png" alt="${product.albumTitle}">
         </div>
 
-        <div class="product-info"></div>
+        <div class="product-info">
             <h2 class="product-title">${product.albumTitle}</h2>
             <h3 class="product-artist">${product.artist}</h3>
             <h4 class="product-genre">${product.genre}</h4>
@@ -49,7 +48,15 @@ function productGenerator() {
                 <div class="media-btn product-media-cassette">KASSETTEBÅND</div>
             </div>
         </div>
-    </div>`
+    </div>
+    
+    <div class="recommend">
+        <h2 class="recommend-title">MERE ${product.genre}</h2>
+        <div class="recommend-container" id="recommend-container">
+        
+        </div>
+    </div>
+    `
     
 }
 

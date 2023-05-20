@@ -94,10 +94,10 @@ const filterInventory = () => {
             if (isDanceFilterActive && inventory.genre === 'dance') {
                 isVisible = true
             }
-            if (isRbFilterActive && inventory.genre === 'rb') {
+            if (isRbFilterActive && inventory.genre === 'r&b') {
                 isVisible = true
             }
-            if (isElectronicFilterActive && inventory.genre === 'electronic') {
+            if (isElectronicFilterActive && inventory.genre === 'elektronisk') {
                 isVisible = true
             }
             if (isHipHopFilterActive && inventory.genre === 'hiphop') {
@@ -112,7 +112,7 @@ const filterInventory = () => {
             if (isSoulFilterActive && inventory.genre === 'soul') {
                 isVisible = true
             }
-            if (isClassicFilterActive && inventory.genre === 'classic') {
+            if (isClassicFilterActive && inventory.genre === 'klassisk') {
                 isVisible = true
             }
             if (isHeavyMetalFilterActive && inventory.genre === 'heavy metal') {
