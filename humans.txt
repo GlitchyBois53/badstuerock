@@ -1,9 +1,11 @@
 /* TEAM */
 
                             
-Your title: Dennis Kristian Niclasen Russell, Frederik Overgaard Barbré, Lean Hansen
+Contributors: Dennis Kristian Niclasen Russell, Frederik Overgaard Barbre, Lean Hansen
                           
-Site: eaadknr@students.eaaa.dk, eaafob@students.eaaa.dk, eaalkh@students.eaaa.dk
+Contact: eaadknr@students.eaaa.dk, eaafob@students.eaaa.dk, eaalkh@students.eaaa.dk
+
+Site: https://www.badstuerock.frederikbarbre.dk
                          
 Location: Aarhus, Denmark.
 					
@@ -11,7 +13,7 @@ Location: Aarhus, Denmark.
 /* THANKS */
 
 
-Name: Björn Lydën, owner of Badstuerock
+Name: Bjoern Lyden, owner of Badstuerock
 
                             
 /* SITE */
