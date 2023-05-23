@@ -35,3 +35,32 @@ function filterToggle() {
         filterContent.classList.add("filter-content-not-active")
     }
 }
+
+// BACK TO TOP ARROW CODE
+
+let topArrow = document.getElementById("back-to-top-btn");
+
+window.addEventListener('wheel', () => {
+    scrollFunction()
+})
+
+const viewPoint = 350;
+
+topArrow.addEventListener('click', () => {
+    topArrow.style.animation = "fade-out ease-in 0.3s";
+    topArrow.style.animationFillMode = "forwards";
+    topArrow.style.pointerEvents = "none";
+    topArrow.style.animationDelay = "0.3s"
+})
+
+function scrollFunction() {
+  if (document.body.scrollTop > viewPoint || document.documentElement.scrollTop > viewPoint) {
+    topArrow.style.visibility = "visible";
+    topArrow.style.animation = "fade ease-in 0.3s";
+    topArrow.style.pointerEvents = "auto";
+  } else {
+    topArrow.style.animation = "fade-out ease-in 0.3s";
+    topArrow.style.animationFillMode = "forwards";
+    topArrow.style.pointerEvents = "none";
+  }
+}

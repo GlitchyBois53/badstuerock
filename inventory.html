@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Badstuerock">
+    <meta property="og:site_name" content="Pladebutik">
+    <meta property="og:description" content="Pladebutik i Latinerkvarteret">
+    <meta name="description" content="Pladebutik i Latinerkvarteret">
+    <meta property="og:image" content="img/logo.svg">
+    <meta name="keywords" content="inventar, produkter, cd, kassette, vinyler, shop, Aarhus, pladebutik, dansk">
+    <meta name="author" content="Dennis Russell, Frederik Barbre, Lean Hansen">
+    <meta name="geo.placename" content="Aarhus">
+    <meta property="og:image" content="img/logo.svg">
+    <meta property="og:url" content="https://badstuerock.frederikbarbre.dk/inventory.html">
+    <meta property="og:locale" content="da_dk">
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
-    <title>Badstuerock - Inventar</title>
+    <title>BadstueRock - Inventar</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
-    <script src="js/inventory.js" defer></script>
     <script src="js/inventoryGenerator.js" type="module"></script>
     <script src="js/searchFunctionality.js" type="module"></script>
     <script src="js/productGenerator.js" type="module"></script>
+    <script src="js/inventory.js" defer></script>
 </head>
 <body>
-    <div class="outer-wrapper">
+    <div class="outer-wrapper" id="top">
 
         <!-- Inner Wrapper Start -->
 
@@ -29,7 +41,7 @@
                 <div>
                     <a class="submenu-logo" href="index.html"><img src="img/logo.svg" alt="badstue-logo"></a>
                     <h1 onclick="window.location.href = 'index.html'">BADSTUE<span>ROCK</span></h1>
-                    <h2 class="submenu-title">INVENTAR</h2>
+                    <h2 class="submenu-title" onclick="window.location.href = 'inventory.html'">INVENTAR</h2>
                 </div>
 
                 <!-- Header div 1 End -->
@@ -44,6 +56,16 @@
                 <!-- Header div 2 End -->
 
             </header>
+
+            <!-- Back to top start -->
+
+            <div class="back-to-top-btn" id="back-to-top-btn">
+                <a href="#top">
+                    <img src="img/arrow-diagonal.svg" alt="back to top button">
+                </a>
+            </div>
+
+            <!-- Back to top slut -->
 
             <!-- Header End -->
 
@@ -214,5 +236,6 @@
     </div>
 
     <!-- Outer Wrapper End -->
+    
 </body>
 </html>

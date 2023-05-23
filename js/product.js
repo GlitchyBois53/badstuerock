@@ -59,6 +59,11 @@ function productGenerator() {
         </div>
     </div>
     `
+
+    var albumHead = product.albumTitle
+
+
+    document.title = `${albumHead.toUpperCase()} | BadstueRock`
 }
 
 productGenerator();
