@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
     <script src="js/inventory.js" defer></script>
-    <script src="js/inventoryGenerator.js" defer type="module"></script>
-    <script src="js/searchFunctionality.js" defer type="module"></script>
-    <script src="js/productGenerator.js" defer type="module"></script>
+    <script src="js/inventoryGenerator.js" type="module"></script>
+    <script src="js/searchFunctionality.js" type="module"></script>
+    <script src="js/productGenerator.js" type="module"></script>
 </head>
 <body>
     <div class="outer-wrapper">
@@ -55,6 +55,9 @@
                         <div class="filter-media" id="medias"></div>
                         <h2>GENRE</h2>
                         <div class="filter-genre" id="genres"></div>
+                        <div class="filter-close-btn" onclick="filterToggle()">
+                            <p>FILTRER</p>
+                        </div>
                     </div>
                     <div class="filter-btn-wrapper">
                         <div class="filter-btn" id="filter-btn" onclick="filterToggle()">
@@ -65,7 +68,7 @@
                 </div>
                 <div class="inventory-content">
                     <div class="search-wrapper">
-                        <label for="search"></label>
+                        <label for="search-bar"></label>
                         <input type="search" name="search" class="search-bar" id="search-bar" placeholder="SØG..">
                         <div class="search-btn">
                             <img src="img/search.svg" alt="search-icon">
@@ -74,23 +77,24 @@
 
                     <template id="inventory-template">
                         <div class="inventory-card">
-                            <div class="inventory-card-id" onclick="window.location.href = 'product.html'">
-                                <div class="inventory-image"></div>
-                                <div class="inventory-genre-year">
-                                    <p class="inventory-genre"></p>
-                                    <p class="inventory-year"></p>
+                            <a href="product.html">
+                                <div class="inventory-card-id">
+                                    <div class="inventory-image"></div>
+                                    <div class="inventory-genre-year">
+                                        <p class="inventory-genre"></p>
+                                        <p class="inventory-year"></p>
+                                    </div>
+                                    <h2 class="inventory-title"></h2>
+                                    <h3 class="inventory-artist"></h3>
                                 </div>
-                                <h2 class="inventory-title"></h2>
-                                <h3 class="inventory-artist"></h3>
-                            </div>
+                            </a>
                         </div>
                     </template>
 
                     <div class="inventory-container" id="inventory-container">
                         <!-- WE SPAWN SHIT HERE -->
                     </div>
-
-                    <!-- PAGE CONTENT HERE -->
+                  
                 </div>
             </div>
 
@@ -134,10 +138,10 @@
                         <!-- Container for Menu / Nav Links Start -->
 
                         <ul class="nav-links">
-                            <li onclick="window.location.href = 'inventory.html'"><strong class="link-active"></strong>INVENTAR<span></span></li>
-                            <li><strong></strong>UPCOMING<span></span></li>
-                            <li><strong></strong>ARTIKLER<span></span></li>
-                            <li><strong></strong>OM OS<span></span></li>
+                            <li><a href="inventory.html"><strong></strong>INVENTAR<span></span></a></li>
+                            <li><a href="#"><strong></strong>UPCOMING<span></span></a></li>
+                            <li><a href="#"><strong></strong>ARTIKLER<span></span></a></li>
+                            <li><a href="#"><strong></strong>OM OS<span></span></a></li>
                         </ul>
 
                         <!-- Container for Menu / Nav Links End -->
@@ -161,7 +165,7 @@
 
                             <ul>
                                 <li>info@badstuerock.dk</li>
-                                <li>+45 31 45 36 63</li>
+                                <li>+45 86 19 76 74</li>
                             </ul>
 
                             <!-- Phone Number And Email Container End -->
@@ -169,8 +173,8 @@
                             <!-- SoMe Icons Container Start -->
 
                             <div class="some">
-                                <img src="img/instagram.png" alt="instagram-icon">
-                                <img src="img/facebook.png" alt="facebook-icon">
+                                <img src="img/instagram.png" alt="instagram-icon" onclick="window.open('https://www.instagram.com/badstuerock/?hl=da', '_blank')">
+                                <img src="img/facebook.png" alt="facebook-icon" onclick="window.open('https://www.facebook.com/badstuerock/?locale=da_DK', '_blank')">
                             </div>
 
                             <!-- SoMe Icons Container End -->

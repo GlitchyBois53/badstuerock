@@ -100,7 +100,7 @@ const filterInventory = () => {
             if (isElectronicFilterActive && inventory.genre === 'elektronisk') {
                 isVisible = true
             }
-            if (isHipHopFilterActive && inventory.genre === 'hiphop') {
+            if (isHipHopFilterActive && inventory.genre === 'hip-hop') {
                 isVisible = true
             }
             if (isHouseFilterActive && inventory.genre === 'house') {

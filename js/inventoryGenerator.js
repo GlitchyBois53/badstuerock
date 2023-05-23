@@ -21,7 +21,7 @@ function mediaGenerator() {
                 </div>
              </div>`;
 	}
-};
+}
 
 
 // Creating the genre card template
@@ -46,6 +46,6 @@ function genreGenerator() {
                 </div>
              </div>`;
 	}
-};
+}
 
 genreGenerator();

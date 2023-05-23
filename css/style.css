@@ -83,6 +83,39 @@
   background: var(--blue); 
 }
 
+/* IOS FORMS FIXER */
+
+@supports (-webkit-touch-callout: none) {
+
+  /* CSS specific to iOS devices */
+  * {
+      -webkit-appearance: none;
+  }
+
+  .search-bar {
+    border-radius: 0px;
+  }
+
+  .search-bar::-webkit-search-cancel-button {
+    content: none;
+    display: none;
+  }
+}
+
+/* DESKTOP - SAFARI FORMS FIXER */
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (display: flow-root) {
+    * {
+        -webkit-appearance: none;
+    }  
+      
+    .search-bar {
+      border-radius: 0px;
+    }
+  }
+}
+
 /*--------- GREEN BOX UTILITY ------------*/
 
 .box-15::after {
@@ -166,6 +199,7 @@
   font-family: var(--primary-ff);
   list-style: none;
   color: var(--black);
+  text-decoration: none;
 }
 
 /*
@@ -476,6 +510,13 @@ header div:nth-child(2) img {
     pointer-events: none;
 }
 
+@media screen and (max-width: 710px) {
+    .nav-content {
+      padding-top: 22px;
+      padding-bottom: 102px;
+  }
+}
+
 
 /*---------- Menu items fade-in and -out animation ----------*/
 
@@ -538,12 +579,13 @@ header div:nth-child(2) img {
 .nav-links li::after {
     content: '';
     height: 4px;
-    width: calc(100% + 140px);
+    width: calc(100% + 60px);
     background-color: var(--blue);
     position: absolute;
     bottom: -10px;
     left: -20px;
-    transform: translateX(100%);
+    transform: scaleX(0);
+    transform-origin: right;
     opacity: 0;
     transition: 0.3s ease-in-out all;
 }
@@ -565,7 +607,8 @@ header div:nth-child(2) img {
 }
 
 .nav-links li:hover::after {
-    transform: translateX(0%);
+    transform: scaleX(1);
+    transform-origin: right;
     opacity: 1;
     transition: all 0.3s ease;
 }
@@ -577,7 +620,7 @@ header div:nth-child(2) img {
     height: 58px;
     margin-top: -11px;
     background-color: var(--blue);
-    width: calc(100% + 140px);
+    width: calc(100% + 60px);
     z-index: -1;
 }
 
@@ -601,6 +644,16 @@ header div:nth-child(2) img {
     right: 40px;
     text-align: right;
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 710px) {
+  .contact {
+    position: absolute;
+    bottom: 102px;
+    right: 40px;
+    text-align: right;
+    text-transform: uppercase;
+}
 }
 
 .contact ul {
@@ -739,7 +792,7 @@ header div:nth-child(2) img {
 
 .close-btn > img {
     position: absolute;
-    top: 0;
+    top: 30px;
     left: 0;
     width: 30px;
     transform: translateX(15px);
@@ -1178,7 +1231,7 @@ header div:nth-child(2) img {
 
   .m-scroll__title h2 {
     margin: 0;
-    font-size: calc(var(--xl5-font * 2));
+    font-size: var(--xl-font);
     color: var(--black);
     transition: all 2s ease;
     font-family: var(--tertiary-ff);
@@ -1193,37 +1246,37 @@ header div:nth-child(2) img {
   }
 
   @-webkit-keyframes scrollTextBackward {
-    from {
+    0% {
       transform: translateX(0%);
     }
-    to {
+    100% {
       transform: translateX(-50%);
     }
   }
 
   @keyframes scrollTextBackward {
-    from {
+    0% {
       transform: translateX(0%);
     }
-    to {
+    100% {
       transform: translateX(-50%);
     }
   }
 
   @-webkit-keyframes scrollTextForward {
-    from {
+    0% {
       transform: translateX(-50%);
     }
-    to {
+    100% {
       transform: translateX(0%);
     }
   }
 
   @keyframes scrollTextForward {
-    from {
+    0% {
       transform: translateX(-50%);
     }
-    to {
+    100% {
       transform: translateX(0%);
     }
   }
@@ -1253,6 +1306,7 @@ header div:nth-child(2) img {
     flex-direction: column;
     text-transform: uppercase;
     position: relative;
+    cursor: pointer;
   }
 
   .album-release::after {
@@ -1349,6 +1403,7 @@ header div:nth-child(2) img {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
 
   .show-all-btn img {
@@ -1622,6 +1677,7 @@ header div:nth-child(2) img {
     height: 100px;
     width: 100px;
     object-fit: contain;
+    cursor: pointer;
   }
 
   .covers1, 
@@ -1919,6 +1975,31 @@ header div:nth-child(2) img {
     margin-bottom: 0px;
     cursor: pointer;
     pointer-events: auto;
+    align-items: center;
+  }
+
+  .filter-close-btn {
+    background-color: var(--blue);
+    text-align: center;
+    height: 53px;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--black);
+    margin-inline: auto;
+    margin-top: var(--sm-spacing);
+    cursor: pointer;
+    display: none;
+  }
+
+  @media screen and (max-width: 710px) {
+    .filter-close-btn {
+      display: flex;
+    }
+  }
+
+  .filter-close-btn p {
+    font-family: var(--secondary-ff);
   }
 
   .filter-btn-open {
@@ -1961,6 +2042,10 @@ header div:nth-child(2) img {
   @media screen and (max-width: 710px) {
     .submenu-header {
       border-bottom: none;
+    }
+
+    .product-header {
+      border-bottom: 3px solid var(--black);
     }
 
     .filter-btn-wrapper {
@@ -2034,7 +2119,6 @@ header div:nth-child(2) img {
   }
 
   .filter-content {
-    max-width: 428px;
     width: 100%;
     padding-right: 45px;
     opacity: 0;
@@ -2157,6 +2241,8 @@ header div:nth-child(2) img {
     flex-wrap: wrap;
     gap: 39px;
     justify-content: center;
+    margin-inline: var(--sm-spacing);
+    margin-bottom: var(--lg-spacing);
   }
 
   .inventory-card {
@@ -2164,6 +2250,7 @@ header div:nth-child(2) img {
     width: 100%;
     text-transform: uppercase;
     position: relative;
+    cursor: pointer;
   }
 
   .inventory-card::after {
@@ -2256,10 +2343,21 @@ header div:nth-child(2) img {
     display: flex;
     width: 100%;
     padding-bottom: var(--md-spacing);
-    border-bottom: 3px var(--black) solid;
     gap: 66px;
     justify-content: center;
     align-items: center;
+  }
+
+  @media screen and (max-width: 1140px) {
+    .product-flex {
+      flex-direction: column;
+      max-width: 600px;
+      margin-inline: auto;
+      padding-inline: 30px;
+    }
+    .product-info {
+      align-self: flex-start;
+    }
   }
 
   .product-info {
@@ -2273,9 +2371,12 @@ header div:nth-child(2) img {
     font-weight: var(--bold-font);
     text-transform: uppercase;
     padding-bottom: 6px;
+    max-width: 460px;
+    transform: translateX(-1.8px);
   }
 
   .product-artist {
+    max-width: 460px;
     font-size: var(--xl-font);
     color: transparent;
     -webkit-text-stroke: 1px var(--black);
@@ -2329,6 +2430,7 @@ header div:nth-child(2) img {
     display: flex;
     gap: 20px;
     margin-top: 20px;
+    flex-wrap: wrap;
   }
 
   .media-btn:hover {
@@ -2369,8 +2471,9 @@ header div:nth-child(2) img {
     background-color: var(--red);
   }
 
-  .recommend {
+  .recommend-product {
     width: 100%;
+    border-top: 3px var(--black) solid;
   }
 
   .recommend-title {
@@ -2389,10 +2492,18 @@ header div:nth-child(2) img {
     display: flex;
     gap: var(--sm-spacing);
     flex-wrap: wrap;
+    margin-inline: var(--sm-spacing);
+    justify-content: center;
   }
 
-  .spacer {
-    height: 200vh;
-    background-image: url(../img/ukendt.jpg);
-    background-size: contain;
+  .recommend-item {
+    display: none;
+  }
+
+  .recommend-no-1,
+  .recommend-no-2,
+  .recommend-no-3,
+  .recommend-no-4,
+  .recommend-no-5 {
+    display: block;
   }

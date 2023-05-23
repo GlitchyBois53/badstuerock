@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
     <script src="js/frontpage.js" defer></script>
-    <script src="js/frontpageGenerator.js" defer type="module"></script>
+    <script src="js/frontpageGenerator.js" type="module"></script>
     <title>Badstuerock</title>
 </head>
 
@@ -54,7 +54,7 @@
             <!-- Hero Start -->
 
             <div class="hero">
-                <img src="img/badstue-hero.webp" alt="badstue-hero">
+                <img src="img/badstue-hero-alt.jpg" alt="badstue-hero">
                 <div class="hero-text">
                     <article>
                         <h2>BADSTUEGADE 22</h2>
@@ -93,7 +93,7 @@
                     <!-- Show all Icon Start -->
     
                     <div class="show-all release-height">
-                        <div class="show-all-btn">
+                        <div class="show-all-btn" onclick="window.location.href = 'inventory.html'">
                             <img src="img/arrow-diagonal.svg" alt="arrow">
                         </div>
                         <h5>VIS ALLE</h5>
@@ -326,10 +326,10 @@
                         <!-- Container for Menu / Nav Links Start -->
 
                         <ul class="nav-links">
-                            <li onclick="window.location.href = 'inventory.html'"><strong></strong>INVENTAR<span></span></li>
-                            <li><strong></strong>UPCOMING<span></span></li>
-                            <li><strong></strong>ARTIKLER<span></span></li>
-                            <li><strong></strong>OM OS<span></span></li>
+                            <li><a href="inventory.html"><strong></strong>INVENTAR<span></span></a></li>
+                            <li><a href="#"><strong></strong>UPCOMING<span></span></a></li>
+                            <li><a href="#"><strong></strong>ARTIKLER<span></span></a></li>
+                            <li><a href="#"><strong></strong>OM OS<span></span></a></li>
                         </ul>
 
                         <!-- Container for Menu / Nav Links End -->
@@ -353,7 +353,7 @@
 
                             <ul>
                                 <li>info@badstuerock.dk</li>
-                                <li>+45 31 45 36 63</li>
+                                <li>+45 86 19 76 74</li>
                             </ul>
 
                             <!-- Phone Number And Email Container End -->
@@ -361,8 +361,8 @@
                             <!-- SoMe Icons Container Start -->
 
                             <div class="some">
-                                <img src="img/instagram.png" alt="instagram-icon">
-                                <img src="img/facebook.png" alt="facebook-icon">
+                                <img src="img/instagram.png" alt="instagram-icon" onclick="window.open('https://www.instagram.com/badstuerock/?hl=da', '_blank')">
+                                <img src="img/facebook.png" alt="facebook-icon" onclick="window.open('https://www.facebook.com/badstuerock/?locale=da_DK', '_blank')">
                             </div>
 
                             <!-- SoMe Icons Container End -->

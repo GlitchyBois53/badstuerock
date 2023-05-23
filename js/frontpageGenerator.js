@@ -1,7 +1,7 @@
 
 // Importing the object arrays / content from 'constants.js'
 
-import { releases, articles, covers1, covers2, covers3, covers4, covers5, covers6, testimonials } from "./constants.js";
+import { releases, articles, covers1, covers2, covers3, covers4, covers5, covers6, testimonials, inventories } from "./constants.js";
 
 
 // Content generator for the 'Releases' section on the front page
@@ -11,7 +11,7 @@ const releasesContainer = document.getElementById("releases");
 function releaseGenerator() {
 	for (let release of releases) {
 			releasesContainer.innerHTML += 
-			`<div class="album-release">
+			`<div class="album-release" id="${release.id}">
                     <img src="./img/${release.image}" alt="" class="album-cover">
                     <div class="genre-year">
                         <p class="genre">${release.genre}</p>
@@ -21,7 +21,19 @@ function releaseGenerator() {
                     <h4 class="artist">${release.artist}</h4>
              </div>`;
 	}
-};
+
+    var albumRelease = document.querySelectorAll(".album-release")
+
+    albumRelease.forEach((userItem) => {  
+        
+        var productId = userItem.id
+        
+        userItem.addEventListener('click', () => {
+            window.location.href = 'product.html'
+            sessionStorage.setItem("product-id", JSON.stringify(inventories[productId]))
+        })
+    })
+}
 
 releaseGenerator();
 
@@ -39,7 +51,7 @@ function articleGenerator() {
                     <p class="artitle">${article.artitle}</p>
              </div>`;
 	}
-};
+}
 
 articleGenerator();
 
@@ -56,56 +68,56 @@ const coverContainer6 = document.querySelector(".covers6");
 function inspirationGenerator1() {
 	for (let cover of covers1) {
 			coverContainer1.innerHTML += 
-			`<div class="cover">
+			`<div class="cover" id="${cover.id}">
                     <img src="./img/${cover.image}" alt="" class="cover-img">
             </div>`;
 	}
-};
+}
 
 function inspirationGenerator2() {
 	for (let cover of covers2) {
 			coverContainer2.innerHTML += 
-			`<div class="cover">
+			`<div class="cover" id="${cover.id}">
                     <img src="./img/${cover.image}" alt="" class="cover-img">
             </div>`;
 	}
-};
+}
 
 function inspirationGenerator3() {
 	for (let cover of covers3) {
 			coverContainer3.innerHTML += 
-			`<div class="cover">
+			`<div class="cover" id="${cover.id}">
                     <img src="./img/${cover.image}" alt="" class="cover-img">
             </div>`;
 	}
-};
+}
 
 function inspirationGenerator4() {
 	for (let cover of covers4) {
 			coverContainer4.innerHTML += 
-			`<div class="cover">
+			`<div class="cover" id="${cover.id}">
                     <img src="./img/${cover.image}" alt="" class="cover-img">
             </div>`;
 	}
-};
+}
 
 function inspirationGenerator5() {
 	for (let cover of covers5) {
 			coverContainer5.innerHTML += 
-			`<div class="cover">
+			`<div class="cover" id="${cover.id}">
                     <img src="./img/${cover.image}" alt="" class="cover-img">
             </div>`;
 	}
-};
+}
 
 function inspirationGenerator6() {
 	for (let cover of covers6) {
 			coverContainer6.innerHTML += 
-			`<div class="cover">
+			`<div class="cover" id="${cover.id}">
                     <img src="./img/${cover.image}" alt="" class="cover-img">
             </div>`;
 	}
-};
+}
 
 inspirationGenerator1();
 inspirationGenerator2();
@@ -113,6 +125,18 @@ inspirationGenerator3();
 inspirationGenerator4();
 inspirationGenerator5();
 inspirationGenerator6();
+
+var inspirationCover = document.querySelectorAll(".cover") 
+
+inspirationCover.forEach((userItem) => {
+    
+    var productId = userItem.id
+
+    userItem.addEventListener('click', () => {
+        window.location.href = 'product.html'
+        sessionStorage.setItem("product-id", JSON.stringify(inventories[productId]))
+    })
+})
 
 // Testimonials generator
 
@@ -135,6 +159,6 @@ function testimonialGenerator() {
                 <p class="testimonial-text">${testimonial.text}</p>
             </div>`;
 	}
-};
+}
 
 testimonialGenerator();
