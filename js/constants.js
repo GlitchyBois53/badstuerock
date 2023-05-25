@@ -54,9 +54,9 @@ export const articles = [
         artitle: 'Ud af ingenting: Ukendt Kunstner er tilbage med nyt album'
     },
     {
-        image: "donny-benet.png",
-        type: "NYHED",
-        artitle: 'Donny Benét: "<i>Dette bliver mit yndlingsafkom.</i>"'
+        image: "plade-guide.png",
+        type: "GUIDE",
+        artitle: 'Sådan holder du dine gamle plader flotte i mange år'
     },
     {
         image: "soeren-huss.png",
@@ -64,14 +64,14 @@ export const articles = [
         artitle: 'Søren Huss: Fra Saybia til gammel mand med hjertesorg'
     },
     {
-        image: "folkeklubben-koncert.png",
-        type: "EVENT",
-        artitle: 'Intimkoncert: Folkekære, folkehelte, Folkeklubben'
+        image: "donny-benet.png",
+        type: "NYHED",
+        artitle: 'Donny Benét: "<i>Dette bliver mit yndlingsafkom.</i>"'
     },
     {
-        image: "marcus-wav.png",
-        type: "UPCOMING",
-        artitle: 'Hold øje med: Marcus.wav, laver pop i et lækkert format'
+        image: "slash.png",
+        type: "PORTRÆT",
+        artitle: 'Husker du Slash? Manden der altid forstod af svinge en spade'
     },
 ]
 

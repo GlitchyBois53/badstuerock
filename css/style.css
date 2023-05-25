@@ -28,7 +28,7 @@
     --lg-spacing: 75px;
 
     /* MAX-WIDTH */
-    --max-width: 1600px;
+    --max-width: 1800px;
 
     /* FONT SIZES */
     --xs3-font: 10px;
@@ -272,9 +272,10 @@ ul {
 
 /*--------- Custom variable doesn't work in media query --------*/
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1800px) {
     .outer-wrapper {
         border-inline: 3px solid var(--black);
+        min-height: 100vh;
     }
 }
 
@@ -517,7 +518,7 @@ header div:nth-child(2) img {
 @media screen and (max-width: 710px) {
     .nav-content {
       padding-top: 22px;
-      padding-bottom: 102px;
+      padding-bottom: 112px;
   }
 }
 
@@ -578,6 +579,11 @@ header div:nth-child(2) img {
     position: relative;
     width: max-content;
     height: 37px;
+}
+
+.nav-links li a {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links li::after {
@@ -652,12 +658,8 @@ header div:nth-child(2) img {
 
 @media screen and (max-width: 710px) {
   .contact {
-    position: absolute;
-    bottom: 102px;
-    right: 40px;
-    text-align: right;
-    text-transform: uppercase;
-}
+    bottom: 112px;
+  }
 }
 
 .contact ul {
@@ -927,6 +929,21 @@ header div:nth-child(2) img {
     min-height: calc(100vh - 130px - 390px);
     justify-content: space-between;
     padding-bottom: 22px;
+}
+
+@media screen and (min-height: 830px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero img:nth-child(1) {
+    padding-bottom: var(--sm-spacing);
+  }
+
+  .hero-text {
+    min-height: auto;
+    padding-bottom: var(--sm-spacing);
+  }
 }
 
 .hero-text article {
@@ -2582,14 +2599,16 @@ header div:nth-child(2) img {
     justify-content: center;
   }
 
-  .recommend-item {
+
+  .recommend-container a {
     display: none;
   }
 
-  .recommend-no-1,
-  .recommend-no-2,
-  .recommend-no-3,
-  .recommend-no-4,
-  .recommend-no-5 {
+  .recommend-container a:has(.recommend-no-1),
+  .recommend-container a:has(.recommend-no-2),
+  .recommend-container a:has(.recommend-no-3),
+  .recommend-container a:has(.recommend-no-4),
+  .recommend-container a:has(.recommend-no-5) {
     display: block;
   }
+
