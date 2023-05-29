@@ -931,21 +931,6 @@ header div:nth-child(2) img {
     padding-bottom: 22px;
 }
 
-@media screen and (min-height: 830px) {
-  .hero {
-    min-height: auto;
-  }
-
-  .hero img:nth-child(1) {
-    padding-bottom: var(--sm-spacing);
-  }
-
-  .hero-text {
-    min-height: auto;
-    padding-bottom: var(--sm-spacing);
-  }
-}
-
 .hero-text article {
     font-family: var(--tertiary-ff);
     width: max-content;
@@ -1065,7 +1050,7 @@ header div:nth-child(2) img {
 
 @media screen and (max-width: 1080px) {
     .badge {
-        margin-right: 30px;
+        margin-right: 50px;
     }
     
 }
@@ -1099,6 +1084,7 @@ header div:nth-child(2) img {
     .badge {
         width: 178px;
         height: 178px;
+        margin-top: var(--sm-spacing);
     }
 
     .badge h3 {
@@ -1140,6 +1126,21 @@ header div:nth-child(2) img {
         font-size: 7.5vw;
     }
 
+}
+
+@media screen and (min-height: 830px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero img:nth-child(1) {
+    padding-bottom: var(--sm-spacing);
+  }
+
+  .hero-text {
+    min-height: auto;
+    padding-bottom: var(--sm-spacing);
+  }
 }
 
 .m-scroll {
