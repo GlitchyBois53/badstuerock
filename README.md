@@ -1,6 +1,6 @@
-# badstuerock
+# BadstueRock
 
-# https://www.badstue.frederikbarbre.dk
+### https://www.badstue.frederikbarbre.dk
 
 # Co-authored by:
 ## Dennis Kristian Niclasen Russell
