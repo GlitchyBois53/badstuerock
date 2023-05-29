@@ -2,7 +2,7 @@
 
 # https://www.badstue.frederikbarbre.dk
 
-# Co-authered by:
+# Co-authored by:
 ## Dennis Kristian Niclasen Russell
 ## Lean Kenneth Hansen
 ## Frederik Overgaard Barbré
